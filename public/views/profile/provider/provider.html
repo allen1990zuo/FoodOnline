@@ -1,0 +1,71 @@
+
+<div class="container-fluid" ng-controller="providerController" >
+  <!-- side bar of user profile							-->
+    <ul role="navigation" profile-sidebar="" class="profile-sidebar">
+      <li class="profile-sidebar-section">
+        <h2 ng-class="{ active: pageName === 'Home' }" class="profile-sidebar-sectiontitle active"><i class="icon-line-home"></i><a href="#/mainprovider">Home</a></h2>
+      </li>
+      <li class="profile-sidebar-section">
+        <h2 class="profile-sidebar-sectiontitle"><i class="icon-line-order"></i>Menu</h2>
+        <ul>
+          <li ng-class="{ active: pageName === 'My Menu' }"><a ui-sref=".listitem" ng-click="listitem()">My Menu</a></li>
+          <li ng-class="{ active: pageName === 'Upload Dish' }"><a ui-sref=".createitem">Upload Dish</a></li>
+        </ul>
+      </li>
+      <li class="profile-sidebar-section">
+        <h2 class="profile-sidebar-sectiontitle"><i class="icon-yen"></i>Order</h2>
+        <ul>
+          <li ng-class="{ active: pageName === 'Order' }"><a ui-sref=".orders">Order</a></li>
+        </ul>
+      </li>
+     
+      <li class="profile-sidebar-section">
+        <h2 class="profile-sidebar-sectiontitle"><i class="icon-line-profile"></i>Profile</h2>
+        <ul>
+          <li ng-class="{ active: pageName === 'info' }"><a ui-sref=".info">Profile</a></li>
+          <li ng-class="{ active: pageName === 'changepassword' }"><a ui-sref=".changepassword">Security</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!-- main panel of user profile				-->
+    <div role="main" class="profile-panel">
+      <!-- ngIf: pageTitleVisible-->
+      <div ng-transclude="" class="profile-panelcontent">
+        <div class="profile-info ng-scope">
+          <div class="profile-infoitem">
+            <div class="profile-avatarwrap"><img  src="/images/websiteimages/seller.jpg" class="profile-avatar"></div>
+            <div class="profile-perosondata">
+              <h3 class="profile-name ng-binding">Hello {{username}}<strong class="ng-binding"> </strong></h3>
+ 
+             
+            </div>
+          </div>
+          <div class="profile-infoitem"><a ui-sref=".listitem" ng-click="listitem()" class="inherit">
+              <p>Menu</p>
+              <p class="profile-infoitem-number coupon"><span ng-bind="pointcount" class="number ng-binding"> </span></p></a>
+          </div>
+          
+          <div class="profile-infoitem"><a ui-sref=".orders" class="inherit">
+              <p>Order</p>
+              <p class="profile-infoitem-number score"><span ng-bind="user.order" class="number ng-binding">0</span></p></a>
+          </div>
+          
+          <div class="profile-infoitem"><a ui-sref=".info" class="inherit">
+              <p>Profile</p>
+              <p class="profile-infoitem-number balance"><span ng-bind="user.balance| number : 2" class="number ng-binding"></span></p></a>
+          </div>
+        </div>
+        <div ui-view=""></div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <div class="footer">
+      
+      </div>
+    </div>
+  </div>
+  
+</div>

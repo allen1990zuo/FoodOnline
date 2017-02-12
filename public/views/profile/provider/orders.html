@@ -1,0 +1,52 @@
+<div ng-controller="orderProviderController">
+<!-- 
+   <ul>
+     
+     <li>
+     <span>Order</span>
+     <span>ItemName</span>
+     <span>Price</span>
+     <span>OwnerName</span>
+     <span>OwnerTelephone</span>
+     <span>Status</span>
+     </li>
+     <li ng-repeat="item in items">
+     <span>{{item.order_id}}</span>
+     <span>{{item.name}}</span>
+     <span>{{item.unitPrice}}</span>
+     <span>{{item.consumer_name}}</span>
+     <span>{{item.consumer_tel}}</span>
+     <span>{{item.status}}</span>
+     <span><a ng-click="changeitemstatus(item)" class="btn btn-primary">Accept</a></span>
+     <span><strong>{{message}}</strong></span>
+     </li>
+   </ul>
+
+ -->
+<span><strong style="color:red">{{message}}</strong></span>
+ <table class="table table-striped">
+   <thead>
+     <tr>
+        <td>Order</td>
+        <td>ItemName</td>
+        <td>Price</td>
+        <td>ConsumerName</td>
+        <td>ConsumerTelephone</td>
+        <td>Status</td>
+     </tr>
+   </thead>
+   <tbody>
+     <tr ng-repeat="item in items">
+        <td>{{item.order_id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.unitPrice}}</td>
+        <td>{{item.consumer_name}}</td>
+        <td>{{item.consumer_tel}}</td>
+        <td>{{item.status}}</td>
+        <td><a ng-click="changeitemstatus(item)" class="btn btn-primary">Accept</a></td>
+     </tr>
+   </tbody>
+
+ </table>
+
+</div>

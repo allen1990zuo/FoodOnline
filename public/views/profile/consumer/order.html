@@ -1,0 +1,52 @@
+<div ng-controller="orderConsumerController">
+<!--  
+   <ul ng-repeat="order in orders">
+     <span>Order:{{order.order_id}}</span>
+     <li>
+     <span>ItemName</span>
+     <span>Price</span>
+     <span>OwnerName</span>
+     <span>OwnerTelephone</span>
+     <span>Status</span>
+     </li>
+     <li ng-repeat="item in order.item_info">
+     <span>{{item.name}}</span>
+     <span>{{item.unitPrice}}</span>
+     <span>{{item.owner_name}}</span>
+     <span>{{item.owner_tel}}</span>
+     <span>{{item.status}}</span>
+     <span><a ng-click="deleteitemfromOrder(order.order_id,item)" class="btn btn-primary">Delete</a></span>
+     <span><strong>{{message}}</strong></span>
+     </li>
+   </ul>
+-->
+ <span><strong style="color:red">{{message}}</strong></span>
+ <table class="table table-striped" ng-repeat="order in orders">
+   <thead>
+     <tr>
+        <td>ItemName</td>
+        <td>Price</td>
+        <td>OwnerName</td>
+        <td>OwnerTelephone</td>
+        <td>Status</td>
+        <td></td>
+        <td>OrderId:{{order.order_id}}</td>
+     </tr>
+   </thead>
+   <tbody>
+     <tr ng-repeat="item in order.item_info">
+        <td>{{item.name}}</td>
+        <td>{{item.unitPrice}}</td>
+        <td>{{item.owner_name}}</td>
+        <td>{{item.owner_tel}}</td>
+        <td>{{item.status}}</td>
+        <td><a ng-click="deleteitemfromOrder(order.order_id,item)" class="btn btn-primary">Delete</a></td>
+        <td></td>
+     </tr>
+   </tbody>
+
+ </table>
+
+
+
+</div>

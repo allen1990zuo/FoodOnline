@@ -1,0 +1,20 @@
+<div ng-controller="consumerSearchController" ng-init="findAllItem()" >
+
+   
+     <input placeholder="dish name or seller's name" type="text" name="keyword" ng-model="keyword">
+     <button type="button" class="btn btn-primary" ng-click="searchByKeyword()">Search</button>        
+   
+   
+
+<div class="row" >
+      <div class="col-md-12" >
+        <div class="thumbnail col-md-3" ng-repeat="item in items"><img alt="Lights" style="width:300px; height:200px" src="/images/fooditems/{{item.image}}">
+          <div class="caption">  
+            <h3> {{item.name}}</h3>
+            <a ng-click="displayitem(item)" class="btn btn-primary">Description</a>
+            <a ng-click="addcart(item)"" class="btn btn-primary">Add to Cart</a>        
+          </div>
+        </div>
+      </div>
+</div>
+</div>

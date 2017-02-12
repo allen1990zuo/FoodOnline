@@ -1,0 +1,27 @@
+<h3 style="text-align: center">Upload Dish</h3>
+<div ng-controller="createitemController" class="container-fluid">
+  <b class="w3-text-red">&nbsp;{{messagecreateitem}}</b>   
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group">
+        <label>Dish Name</label>
+        <input type="text" ng-model="name" name="name" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" ng-model="description" name="description" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>Price</label>
+        <input type="text" ng-model="unitPrice" name="unitPrice" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>UploadImage</label></br>
+        <input class="btn btn-info btn-lg" type="button" ngf-select="" ngf-pattern="'image/*'" ngf-multiple="false" ng-model="data.file" value="SelectFile"/>       
+        <img ngf-src="data.file || data.defaultImage" class="img-responsive" style="width:200px; height: 200px; max-width:500px;"/>
+      </div>
+      <button ng-click="createitem()" class="btn btn-info btn-lg">Submit</button>
+      
+    </div>
+  </div>
+</div>

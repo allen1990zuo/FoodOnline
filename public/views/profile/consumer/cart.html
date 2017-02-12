@@ -1,0 +1,14 @@
+<div ng-controller="cartController">
+<b class="w3-text-red">&nbsp;{{messagecart}}</b>   
+<div class="row" >
+      <div class="col-md-12" >
+        <div class="thumbnail col-md-3" ng-repeat="cart in carts"><img alt="Lights" style="width:300px; height:200px" src="/images/fooditems/{{cart.image}}">
+          <div class="caption">  
+            <h3> {{cart.name}}</h3>
+            <a ng-click="deleteitem(cart)" class="btn btn-primary">Delete</a>
+          </div>
+        </div>
+      </div>
+</div>
+<a ng-click="checkout(carts)" class="btn btn-primary">Checkout</a>   
+</div>  

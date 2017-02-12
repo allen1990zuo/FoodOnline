@@ -1,0 +1,69 @@
+<div class="container-fluid" ng-controller="consumerController">
+  <!-- side bar of user profile							-->
+    <ul role="navigation" profile-sidebar="" class="profile-sidebar">
+      <li class="profile-sidebar-section">
+        <h2 ng-class="{ active: pageName === 'Home' }" class="profile-sidebar-sectiontitle active"><i class="icon-line-home"></i><a href="#/mainconsumer">Home</a></h2>
+      </li>
+      <li class="profile-sidebar-section">
+        <h2 class="profile-sidebar-sectiontitle"><i class="icon-line-order"></i>Food</h2>
+        <ul>
+          <li ng-class="{ active: pageName === 'search' }"><a ui-sref=".search">Serach</a></li>
+          <li ng-class="{ active: pageName === 'Map' }"><a ui-sref=".map">Map</a></li>
+          <li ng-class="{ active: pageName === 'Cart' }"><a ui-sref=".cart">Cart</a></li>
+        </ul>
+      </li>
+      <li class="profile-sidebar-section">
+        <h2 class="profile-sidebar-sectiontitle"><i class="icon-line-order"></i>Order</h2>
+        <ul>
+          <li ng-class="{ active: pageName === 'order' }"><a ui-sref=".order">Order</a></li>
+          
+        </ul>
+      </li>
+     
+      <li class="profile-sidebar-section">
+        <h2 class="profile-sidebar-sectiontitle"><i class="icon-line-profile"></i>Profile</h2>
+        <ul>
+          <li ng-class="{ active: pageName === 'profile' }"><a ui-sref=".profile">Profile</a></li>
+         
+          <li ng-class="{ active: pageName === 'changepassword' }"><a ui-sref=".changepassword">Security</a></li>
+        </ul>
+      </li>
+      
+    </ul>
+    <!-- main panel of user profile				-->
+    <div role="main" class="profile-panel">
+      <!-- ngIf: pageTitleVisible-->
+      <div ng-transclude="" class="profile-panelcontent">
+        <div class="profile-info ng-scope">
+          <div class="profile-infoitem">
+            <div class="profile-avatarwrap"><img alt="profile" src="images/websiteimages/buyer.jpg" class="profile-avatar"></div>
+            <div class="profile-perosondata">
+              <h3 class="profile-name ng-binding">Hello {{username}}<strong class="ng-binding"> </strong></h3>
+              
+            </div>
+          </div>
+          <div class="profile-infoitem"><a ui-sref=".cart" class="inherit">
+              <p>Cart</p>
+              <p class="profile-infoitem-number hongbao"><span ng-bind="hongbaocount" class="number ng-binding"></p></a></div>
+          <div class="profile-infoitem"><a ui-sref=".order" class="inherit">
+              <p>Order</p>
+              <p class="profile-infoitem-number score"><span ng-bind="user.point" class="number ng-binding"></p></a></div>
+          <div class="profile-infoitem"><a ui-sref=".profile" class="inherit">
+              <p>Profile</p>
+              <p class="profile-infoitem-number balance"><span ng-bind="user.balance| number : 2" class="number ng-binding"></p></a></div>
+        </div>
+        
+        
+      </div>
+      <div ui-view=""></div>
+    </div>
+  </div>
+  <hr>
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <div class="footer">
+       
+      </div>
+    </div>
+  </div>
+</div>

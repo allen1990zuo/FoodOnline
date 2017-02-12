@@ -1,0 +1,19 @@
+<div ng-controller="mapController">
+    <div ui-view=""></div>
+    <ng-map center="{{user.latitude}},{{user.longitude}}" style="height: 480px;" zoom="12">
+        <div ng-repeat="seller in sellers">
+            <marker position="{{seller.latitude}}, {{seller.longitude}}" on-click="showdata(event,seller)">
+            </marker>
+        </div>
+            <info-window id="info-window" >
+             <div ng-non-bindable="">
+               shopname: {{selectseller.shopname}}<br/>
+               telephone: {{selectseller.telephone}}<br/>
+               <a ui-sref=".menu" ng-click="menu(selectseller.name)">Menu</a><br/>
+             </div>
+          </info-window>
+        
+    </ng-map>
+    
+</div>
+

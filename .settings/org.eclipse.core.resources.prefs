@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//public/views/displayitem.html=UTF-8
+encoding//public/views/login/login.html=UTF-8
+encoding//public/views/login/signup.html=UTF-8
+encoding//public/views/main.html=UTF-8
+encoding//public/views/mainconsumer.html=UTF-8
+encoding//public/views/profile/consumer/cart.html=UTF-8
+encoding//public/views/profile/consumer/consumer.html=UTF-8
+encoding//public/views/profile/consumer/menu.html=UTF-8
+encoding//public/views/profile/provider/changepassword.html=UTF-8
+encoding//public/views/profile/provider/createitem.html=UTF-8
+encoding//public/views/profile/provider/listitem.html=UTF-8
+encoding//public/views/profile/provider/provider.html=UTF-8
+encoding//public/views/profile/provider/updateitem.html=UTF-8

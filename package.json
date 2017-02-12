@@ -1,0 +1,28 @@
+{
+  "name": "food",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "server.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",  
+    "cookie-parser": "^1.4.3",
+    "express": "4.14.0",
+    "express-session": "^1.14.2",
+    "formidable": "^1.0.17",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^5.0.2",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.7.3",
+    "morgan": "^1.7.0",
+    "multer": "1.1.0",
+    "node-uuid": "^1.4.7",
+    "node-rest-client": "^2.0.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0", 
+    "silly-datetime": "^0.1.2"
+    
+  }
+}

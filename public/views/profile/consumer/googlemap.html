@@ -1,0 +1,32 @@
+<div ng-app="app" ng-controller="locatorController" class="location-finder">
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" control="map.control">
+
+      <!-- Map Pins -->
+      <ui-gmap-markers models="map.markers" idKey="'id'" coords="'self'" events="map.markersEvents">
+      </ui-gmap-markers>
+
+      <!-- InfoWindows -->
+<!-- this works, but infowindow is not attached to marker -->
+      <ui-gmap-window 
+      show="map.window.show" 
+      coords="map.window.model" 
+      templateUrl="'AngularJS/infowindow.tpl'" 
+      templateParameter="map.window.model" 
+      options="map.window.options"
+      ng-cloak>
+      </ui-gmap-window>
+<!-- try this instead of the above and the template does not load -->
+<!-- <ui-gmap-window show="map.window.show" coords="map.window.model" templateUrl="'infowindow.tpl'" ng-cloak></ui-gmap-window>-->
+
+
+    </ui-gmap-google-map>
+
+    <ul class="location-list">
+      <li ng-repeat="location in map.markers" ng-class="{selected: location == map.window.model}" ng-click="map.window.model = location">
+        Location #{{location.id}} is at: ({{location.latitude}}, {{location.longitude}})
+      </li>
+    </ul>
+    <br>
+    <span>window:{{map.window}}</span>
+  </div>
+

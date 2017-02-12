@@ -1,0 +1,22 @@
+<img id="backgroundimage" alt="" src="images/websiteimages/background1.jpg"/>
+<div ng-controller="loginController" class="w3-container">
+  <div id="id01" class="w3-modal" style="display:block">
+    <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+      <div class="w3-center"><br>
+        <font size=+1 style="width:30%" class="w3-circle w3-margin-top"><b>Detail</b></font> 
+      </div>
+      <div class="w3-container">
+        <div class="w3-section w3-center">
+          <img alt="Lights" style="width:300px; height:200px" src="/images/fooditems/{{item.image}}"/></br></br>
+          <label><b>Name:{{item.name}}</b></label></br> 
+          <label><b>Description：{{item.description}}</b></label></br>
+          <label><b>Price： {{item.unitPrice}}</b></label></br>
+          <button class="w3-btn-block w3-blue w3-section w3-padding" ng-click="addcart(item)">Add to Cart</button>
+          <button class="w3-btn-block w3-blue w3-section w3-padding" ng-click="back()">Back</button>
+        </div>
+      
+     </div>
+    </div>
+  </div>
+</div>
+   
