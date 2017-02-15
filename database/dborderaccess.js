@@ -8,7 +8,7 @@
 var mongoose = require('mongoose');
 var crypt = require('bcrypt-nodejs');
 var uuid = require('node-uuid');
-var schema = require('../model/Order').getOrderModel();
+var schema = require('../model/order').getOrderModel();
 var Order = mongoose.model('Order', schema);
 var log = require('../util/log.js').getLogger(__filename);
 var config = require('../config/config.json');
